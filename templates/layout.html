@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>OneApp</title>
+    <strong><link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}"></strong>
+    <style type="text/css">
+            body {
+                background-image: url("{{url_for('static', filename='img/blurred.jpg')}}");
+            }
+        </style>
+  </head>
+  <body>
+
+    <header>
+      <div class="container">
+        <h1 class="logo">OneApp</h1>
+      </div>
+      <strong><nav>
+  			<ul>
+  			  <li><a href="{{url_for('home' )}}">Home</a></li>
+  			  </li>
+  			  <li><a href="{{url_for('contact' )}}">Contact</a></li>
+  			  <li><a href="{{url_for('about' )}}">About</a></li>
+  			  <li><a href="#">Log In</a>
+  			    <ul>
+  			      <li><a href="{{url_for('login') }}">Student</a></li>
+  			      <li><a href="#">University</a></li>
+  			    </ul>
+  			</ul>
+  		</nav></strong>
+    </header>
+
+    <div class="container">
+      {% block content %}
+      {% endblock %}
+    </div>
+
+  </body>
+</html>
