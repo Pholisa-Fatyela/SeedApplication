@@ -2,7 +2,8 @@
 <html>
   <head>
     <title>OneApp</title>
-    <strong><link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}"></strong>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
     <style type="text/css">
             body {
                 background-image: url("{{url_for('static', filename='img/blurred.jpg')}}");
@@ -13,7 +14,7 @@
 
     <header>
       <div class="container">
-        <h1 class="logo">OneApp</h1>
+        <h1>OneApp</h1>
       </div>
       <strong><nav>
   			<ul>
@@ -34,6 +35,8 @@
       {% block content %}
       {% endblock %}
     </div>
+    <script src="{{ url_for('static', filename='js/jquery-1.11.3.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.min.css') }}"></script>
 
   </body>
 </html>
